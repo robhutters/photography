@@ -19,14 +19,14 @@ class Slider extends Component {
 
   componentDidMount() {
     
-    fetch("http://localhost:3000/images.json")
+    fetch("/images.json")
     .then((res) => res.json())
     .then((data) => this.setState({data}))
     .catch((e) => console.log(e))
 
     store.addNotification({
       title: "Welcome!",
-      message: `Best viewed in full-screen mode! CTRL+CMD/WINDOWS+F`,
+      message: `Best viewed in full-screen mode! CTRL+CMD+F (MAC)`,
       type: "success",
       insert: "top",
       container: "top-right",
