@@ -18,20 +18,12 @@ class Slider extends Component {
 
 
   componentDidMount() {
-    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-      fetch("http://localhost:3000/images.json")
+    
+    fetch("http://localhost:3000/images.json")
     .then((res) => res.json())
     .then((data) => this.setState({data}))
     .catch((e) => console.log(e))
 
-    } else {
-      fetch("https://0643141fdfc5.ngrok.io/images.json")
-    .then((res) => res.json())
-    .then((data) => this.setState({data}))
-    .catch((e) => console.log(e))
-    }
-    
-    
     store.addNotification({
       title: "Welcome!",
       message: `Best viewed in full-screen mode! CTRL+CMD/WINDOWS+F`,

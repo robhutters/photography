@@ -23,5 +23,13 @@
 {
   "source": "img/polar-bear-playful.jpg",
   "key": 7
+},
+{
+  "source": "img/fox-sleepy.JPG",
+  "key": 8
+},
+{
+  "source": "img/happy.JPG",
+  "key": 9
 }
 ]
