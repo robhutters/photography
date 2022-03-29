@@ -45,19 +45,21 @@ class Slider extends Component {
   render() { 
     const data = this.state.data ? this.state.data : null
     if (data !== null) {
-      if (window.outerHeight < 600) {
-        return (<div>Your screen is too small to properly view the photographs. Please use a desktop.</div>)
-      }
-      
-      return ( 
-  
-        <div>
+      if (window !== undefined) {
+        if (window.outerHeight < 600) {
+          return (<div>Your screen is too small to properly view the photographs. Please use a desktop.</div>)
+        }
         
-          <Slides data={data} />
-         
-        </div>
-     
-      )
+        return ( 
+    
+          <div>
+          
+            <Slides data={data} />
+           
+          </div>
+       
+        )
+      }
     } else {
       
       return (<div>Loading items ...</div>)
